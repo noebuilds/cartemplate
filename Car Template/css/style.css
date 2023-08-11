@@ -1,0 +1,177 @@
+/* Reset default margin and padding */
+body, h1, h2, h3, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set background color and font styles */
+body {
+  background-color: #1a1a1a;
+  font-family: Arial, sans-serif;
+  color: #ff9900;
+}
+
+/* Header styles */
+.header {
+  background-color: skyblue; 
+  text-align: center;
+  padding: 20px;
+}
+
+.header h1 {
+  font-size: 98px;
+  font-weight: bold;
+  font-family: 'Brush Script MT', cursive;
+  color: #ff9900; /* Change to your desired color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Container styles */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+}
+
+.container:nth-child(even) {
+  background-color: #292929;
+}
+
+/* Car name styles */
+.name h1 {
+  font-size: 88px;
+  font-weight: bold;
+  color: #ff9900;
+  font-style: italic;
+  animation: growName 1s ease-in-out forwards;
+  font-family: 'Brush Script MT', cursive;
+}
+
+@keyframes growName {
+  0% {
+      font-size: 48px;
+  }
+  100% {
+      font-size: 60px;
+  }
+}
+
+/* Car image styles */
+.car-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Car info styles */
+.car-info {
+  padding: 20px;
+}
+
+.car-info h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.car-info ul {
+  list-style: none;
+  margin-right: 5px;
+  font-size: 14px;
+}
+
+.car-info li {
+  margin-bottom: 10px;
+}
+
+.car-info li strong {
+  font-weight: bold;
+}
+/* Lightbox styles */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+}
+
+.lightbox-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+  max-height: 90%;
+  text-align: center;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+#lightboxImage {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.footer {
+  background-color: skyblue; 
+  text-align: center;
+  padding: 20px;
+}
+.footer span {
+  font-size: 10px;
+  color: beige;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icon {
+  font-size: 24px;
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+  transform: scale(1.2); /* Enlarge the icon on hover */
+}
+
+.car-image img:hover {
+  animation: bounceImage 0.5s ease-in-out infinite;
+}
+
+@keyframes bounceImage {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+}
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      padding: 20px;
+  }
+
+  .container:nth-child(even) {
+      background-color: transparent;
+  }
+}
+
